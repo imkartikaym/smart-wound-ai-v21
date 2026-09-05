@@ -1,0 +1,57 @@
+{
+    "project": "SMART WOUND AI",
+    "version": "V2.1",
+    "model": "Random Forest",
+    "n_estimators": 500,
+    "number_of_biomarkers": 6,
+    "biomarkers": [
+        "pH",
+        "temperature",
+        "lactate",
+        "protease",
+        "glucose",
+        "oxygen"
+    ],
+    "number_of_features": 24,
+    "temporal_descriptors": [
+        "latest",
+        "mean",
+        "velocity",
+        "variability"
+    ],
+    "observation_window": "0-4",
+    "training_patients": 800,
+    "independent_test_patients": 200,
+    "patient_level_split": true,
+    "patient_overlap": 0,
+    "target": "future infection",
+    "infection_onset_range": "7-9",
+    "cv_roc_auc": 0.729,
+    "cv_roc_auc_std": 0.0386,
+    "independent_test_roc_auc": 0.7662,
+    "independent_test_pr_auc": 0.7084,
+    "independent_test_accuracy": 0.69,
+    "independent_test_precision": 0.6395,
+    "independent_test_recall": 0.6395,
+    "independent_test_f1": 0.6395,
+    "independent_test_sensitivity": 0.6395,
+    "independent_test_specificity": 0.7281,
+    "brier_score": 0.1944,
+    "bootstrap_samples": 2000,
+    "bootstrap_roc_auc_ci": [
+        0.6982,
+        0.8274
+    ],
+    "bootstrap_pr_auc_ci": [
+        0.6143,
+        0.802
+    ],
+    "mean_absolute_calibration_error": 0.0693,
+    "maximum_calibration_error": 0.1758,
+    "best_early_warning_window": "0-3",
+    "best_early_warning_roc_auc": 0.7776,
+    "noise_robustness_20_percent_roc_auc": 0.7892,
+    "simulation_based": true,
+    "clinical_validation": false,
+    "random_seed": 42
+}
